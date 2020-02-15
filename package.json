@@ -1,0 +1,49 @@
+{
+  "name": "vk-stt-bot",
+  "version": "1.0.0",
+  "description": "Converts audio messages in dialogs into text",
+  "main": "./build/app.js",
+  "author": "Neur0toxine",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./build/app.js",
+    "inspect": "npx cross-env DEBUG=express:* nodemon --inspect src/app.ts",
+    "lint": "yarn lint:js ",
+    "lint:eslint": "npx eslint --ignore-path .gitignore --ext .ts",
+    "lint:js": "yarn lint:eslint src/",
+    "lint:fix": "yarn lint:js -- --fix"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "celebrate": "^11.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "method-override": "^3.0.0",
+    "node-wit": "^5.0.0",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.8.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "@types/hapi__joi": "^16.0.10",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.7.1",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "cross-env": "^7.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
